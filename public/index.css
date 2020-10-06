@@ -68,5 +68,6 @@ footer {
         font-size: 2em !important;
         border-right: none;
         border-bottom: 1px solid black;
+        padding-bottom: 100px;
     }
 }
