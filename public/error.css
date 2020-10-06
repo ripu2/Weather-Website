@@ -1,0 +1,45 @@
+body {
+    background: #eaebed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+html {
+    height: 100%;
+}
+
+#error-code {
+    text-align: center;
+    margin-top: 10%;
+}
+
+.btn {
+    background: #696f89;
+    position: absolute;
+    left: 50%;
+    margin-top: 2em;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+a {
+    display: block;
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.box {
+    margin-top: 15%;
+}
+
+#small {
+    font-size: 1.5em !important;
+    padding: 1em;
+    margin-top: 2em;
+    text-align: center;
+}
