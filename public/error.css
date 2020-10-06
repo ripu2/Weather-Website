@@ -43,3 +43,12 @@ a:hover {
     margin-top: 2em;
     text-align: center;
 }
+
+@media (max-width: 1000px) {
+    img {
+        display: none !important;
+    }
+    btn {
+        margin-bottom: 30em !important;
+    }
+}
