@@ -1,16 +1,16 @@
-#### Weather Information Website🎊🎊🎊
+# Weather Information Website🎊🎊🎊
 
 ## SnapShots
 
-# Main Page
+### Main Page
 
 ![image](https://user-images.githubusercontent.com/44752831/95512227-2eef0600-09d6-11eb-86f5-2fa6b97bf76b.png)
 
-# Reponse Page
+### Reponse Page
 
 ![image](https://user-images.githubusercontent.com/44752831/95512551-9907ab00-09d6-11eb-870d-360fbbee12f6.png)
 
-# Error Page
+### Error Page
 
 ![image](https://user-images.githubusercontent.com/44752831/95512312-46c68a00-09d6-11eb-9c52-9fa6bc17927d.png)
 
