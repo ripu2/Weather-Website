@@ -19,9 +19,10 @@ app.post('/', (req, res) => {
             response.on('data', (data) => {
                 const weather = JSON.parse(data);
                 const cityName = weather.name;
-                const temp = weather.temp;
+                const temp = weather.main.temp;
                 const type = weather.weather[0].main
                 const humidity = weather.main.humidity
+                console.log(weather)
                 res.render('index', { cityName: cityName, temp: temp, type: type, humidity: humidity })
 
             });
