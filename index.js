@@ -23,12 +23,7 @@ app.post('/', (req, res) => {
                 const type = weather.weather[0].main
                 const humidity = weather.main.humidity
                 res.render('index', { cityName: cityName, temp: temp, type: type, humidity: humidity })
-                    // res.write(
-                    //     `<h1>The temperature in ${weather.name} is ${weather.main.temp} &#8451</h1>`
-                    // );
-                    // res.write(`<h1>It's a ${weather.weather[0].main}</h1>`);
-                    // res.write(`<h1> Humdity is ${weather.main.humidity}</h1>`);
-                    // res.end();
+
             });
         } else {
             res.sendFile(__dirname + '/public/error.html');
