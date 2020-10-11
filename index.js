@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
 });
-app.post('/', (req, res) => {
+app.post('/result', (req, res) => {
     const city = req.body.city;
     const country = req.body.country;
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${key}&units=metric`;
@@ -23,7 +23,7 @@ app.post('/', (req, res) => {
                 const type = weather.weather[0].main
                 const humidity = weather.main.humidity
                 console.log(weather)
-                res.render('index', { cityName: cityName, temp: temp, type: type, humidity: humidity })
+                res.render('result', { cityName: cityName, temp: temp, type: type, humidity: humidity })
 
             });
         } else {
