@@ -3,7 +3,7 @@ const app = express();
 const https = require('https');
 const bodyParser = require('body-parser');
 const key = 'e257282a47b7b90882e0d00cacd77ab0';
-// const path = require('path');
+app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -18,12 +18,12 @@ app.post('/', (req, res) => {
         if (response.statusCode === 200) {
             response.on('data', (data) => {
                 const weather = JSON.parse(data);
-                res.write(
-                    `<h1>The temperature in ${weather.name} is ${weather.main.temp} &#8451</h1>`
-                );
-                res.write(`<h1>It's a ${weather.weather[0].main}</h1>`);
-                res.write(`<h1> Humdity is ${weather.main.humidity}</h1>`);
-                res.end();
+                const cityName = weather.name;
+                const temp = weather.temp;
+                const type = weather.weather[0].main
+                const humidity = weather.main.humidity
+                res.render('index', { cityName: cityName, temp: temp, type: type, humidity: humidity })
+
             });
         } else {
             res.sendFile(__dirname + '/public/error.html');
